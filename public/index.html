@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web-Based Text Encryption Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="header">
+        <p class="eyebrow">Assignment 2</p>
+        <h1>Web-Based Text Encryption Tool</h1>
+        <p>Encrypt, decrypt, encode, and hash text using multiple cryptographic techniques.</p>
+      </div>
+
+      <label for="inputText">Plain Text / Ciphertext</label>
+      <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+
+      <div class="grid">
+        <div>
+          <label for="algorithm">Encryption / Hash Method</label>
+          <select id="algorithm">
+            <option value="">-- Select Method --</option>
+            <optgroup label="Encryption Techniques">
+              <option value="caesar">Caesar Cipher</option>
+              <option value="vigenere">Vigenere Cipher</option>
+              <option value="aes">AES-256-GCM</option>
+              <option value="rsa">RSA-2048 (OAEP)</option>
+              <option value="xor">XOR Cipher</option>
+              <option value="railfence">Rail Fence Cipher</option>
+            </optgroup>
+            <optgroup label="Encoding / Hashing">
+              <option value="base64">Base64 Encoding</option>
+              <option value="sha256">SHA-256 Hash</option>
+              <option value="sha512">SHA-512 Hash</option>
+              <option value="md5">MD5 Hash</option>
+            </optgroup>
+          </select>
+        </div>
+        <div id="parameterBox">
+          <label id="parameterLabel" for="parameter">Parameter</label>
+          <input id="parameter" type="text" placeholder="Select a method first">
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="encryptBtn">Encrypt</button>
+        <button id="decryptBtn" class="secondary">Decrypt</button>
+        <button id="hashBtn" class="secondary">Hash</button>
+      </div>
+
+      <label for="output">Result</label>
+      <textarea id="output" readonly placeholder="Your result will appear here..."></textarea>
+      <button id="copyBtn" class="copy">Copy Result</button>
+      <p id="status" class="status"></p>
+
+      <div class="info">
+        <strong>6 encryption techniques:</strong>
+        <span>Caesar</span><span>Vigenere</span><span>AES-256-GCM</span><span>RSA-2048</span><span>XOR</span><span>Rail Fence</span>
+        <strong>Extras:</strong>
+        <span>Base64</span><span>SHA-256</span><span>SHA-512</span><span>MD5</span>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
